@@ -29,6 +29,7 @@ Installation
 - Edit the top of Makefile with compiler and LAPACK/BLAS information. Set the
   optimization level (opt =) and serial/parallel mode (mode =, with
   (s)erial, OpenMP (omp), and MPI (mpi)).
+- mkdir bin lib
 - On the command line, type 'make'.
 - (Optional.) Start Matlab and cd to 'matlab/'. Type 'make'. It seems Macs have
   a problem with recent versions of Matlab; follow these instructions:
