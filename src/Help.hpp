@@ -132,6 +132,12 @@ additional fields:\n\
       order [real scalar]:\n\
       delta [real scalar]:\n\
 \n\
+    external: read a Green's function matrix calculated externally.\n\
+      Ns, Nr [int scalars]: number of sources, receivers.\n\
+      xs [3xNs real array]: source coordinates.\n\
+      xr [3xNr real array]: receiver coordinates.\n\
+      G [real NrxNs]: Green's function matrix.\n\
+\n\
     DEV Add additional kernel descriptions here.\n\
 \n\
 \n\

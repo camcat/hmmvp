@@ -101,6 +101,7 @@ public:
 /* DEV For neatness, you might put your code into a file whose name
    corresponds to the string identifier and include it here. */
 #include "GreensFnInverseR.cpp"
+#include "ExtGreensFnMatrix.cpp"
 
 ImplGreensFn* NewGreensFn (const string& id, const KeyValueFile* kvf)
   throw (Exception)
@@ -109,7 +110,11 @@ ImplGreensFn* NewGreensFn (const string& id, const KeyValueFile* kvf)
   /* DEV Add your GF's string identifier here. */
   if (id == "inverse-r") {
     gf = new InverseRGreensFn();
-  } else {
+  }
+  else if (id == "external") {
+    gf = new ExtGreensFn();
+  }
+  else {
     throw Exception("No such Green's function string identifier.");
   }
   if (!gf) throw Exception("gf is NULL.");

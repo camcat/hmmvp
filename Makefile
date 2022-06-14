@@ -8,7 +8,7 @@ BLASLIB = -lblas
 LAPACKLIB = -llapack
 FORTRANLIB = -lgfortran
 
-CPP = g++
+CPP = g++ -w
 MPICPP = mpic++
 FORTRAN = gfortran
 
@@ -99,4 +99,4 @@ ifneq ($(ext),mpi)
 endif
 
 clean:
-	rm -f src/*.o lib/*.a bin/*
+	rm -f src/*.o lib/*.a bin/* examples/*_s examples/*_omp examples/*_mpi matlab/*mexa64
