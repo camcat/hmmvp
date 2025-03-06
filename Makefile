@@ -1,3 +1,10 @@
+# Usage:
+#   make mode=s/omp/mpi/hybrid
+#
+# Choose serial, OpenMP-parallelized, MPI-parallized versions, or hybrid
+# MPI-OpenMP. I prefer OpenMP to MPI if I'm running on one shared-memory
+# machine. Compression cannot be run as hybrid; only the MVP can.
+#
 # ------------------------------------------------------------------------------
 # GNU gmake file.
 
@@ -18,14 +25,6 @@ FORTRAN = gfortran
 #opt = 
 #opt = -g
 opt = -O3
-
-# Choose serial, OpenMP-parallelized, MPI-parallized versions, or hybrid
-# MPI-OpenMP. I prefer OpenMP to MPI if I'm running on one shared-memory
-# machine. Compression cannot be run as hybrid; only the MVP can.
-#mode = s
-mode = omp
-#mode = mpi
-#mode = hybrid
 
 # Probably does not need to be changed:
 ifeq ($(mode),s)
